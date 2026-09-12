@@ -1,7 +1,7 @@
 import githubImage from "./assets/github.svg";
 import Linkedln from "./assets/linkedin.svg";
 import book from "./assets/book.webp";
-import Proyects from "./Proyects";
+import Projects from "./Projects";
 
 export default function HeroContent({ isSpanish }) {
   const buttonsLink = [
@@ -54,7 +54,7 @@ export default function HeroContent({ isSpanish }) {
             </span>
           </>
         )}
-        <div className="flex gap-3 pt-4">
+        <div className="flex gap-3 pt-4 mt-5">
           {isSpanish ? (
             <a
               href={buttonsLink[0]}
@@ -84,7 +84,56 @@ export default function HeroContent({ isSpanish }) {
             Github
           </a>
         </div>
-        <Proyects isSpanish={isSpanish} />
+
+        {isSpanish ? (
+          <>
+            <div className="flex gap-3 md:mt-20 lg:mt-40">
+            <svg
+              className="mt-11 size-7"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M15 12h.01"></path>
+              <path d="M12 12h.01"></path>
+              <path d="M9 12h.01"></path>
+              <path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2"></path>
+              <path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2"></path>
+            </svg>
+            <h1 className="mt-10 text-3xl">Proyectos</h1>
+          </div>
+          </>
+        ) : (
+          <div className="flex gap-3 md:mt-20 lg:mt-40">
+            <svg
+              className="mt-11 size-7"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M15 12h.01"></path>
+              <path d="M12 12h.01"></path>
+              <path d="M9 12h.01"></path>
+              <path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2"></path>
+              <path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2"></path>
+            </svg>
+            <h1 className="mt-10 text-3xl">Projects</h1>
+          </div>
+        )}
+
+        <Projects isSpanish={isSpanish} />
       </div>
     </>
   );

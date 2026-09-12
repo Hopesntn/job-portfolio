@@ -34,3 +34,25 @@
 :root, [data-theme="dark"]{
   --background-color: #151312;
 }
+.header-nav {
+  animation: nav-appear 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+  @apply bg-newBlack;
+  
+}
+
+.nav-link.text-yellow-500 {
+  @apply font-bold;
+}
+
+@keyframes nav-appear {
+  0% {
+    background-color: transparent;
+    box-shadow: 1;
+  }
+  to {
+    box-shadow: 0 10px 15px -3px rgba(235, 232, 232, 0.1), 0 4px 6px -4px rgb(0 0 0 / 10%), 0 0 0 1px rgba(255, 255, 255, 0);
+    backdrop-filter: blur(12px);
+  }
+}
