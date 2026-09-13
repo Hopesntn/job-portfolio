@@ -8,7 +8,7 @@ export default function Experience({ isSpanish }) {
     {
       title: "Computer Maintenance Support (Part-time) ",
       subtitle: "INPSERCOM",
-      description: "Performed scheduled cleaning and preventive maintenance, craeted consistent directory and folder structures and supported file debbugging and organization",
+      description: "Performed scheduled cleaning and preventive maintenance, created consistent directory and folder structures, and supported file debugging and organization",
     },
   ];
   return (
@@ -42,11 +42,11 @@ export default function Experience({ isSpanish }) {
           </div>
         )}
         {experience.map((attribute)=> (
-            <>
+          <div key={attribute.title}>
                 <h1>{attribute.title}</h1>
                 <h3>{attribute.subtitle}</h3>
                 <p>{attribute.description}</p>
-            </>
+          </div>
           ))}
       </div>
     </>

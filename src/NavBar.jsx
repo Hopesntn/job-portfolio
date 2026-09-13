@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Globe } from "lucide-react";
 
 export default function NavBar({ isSpanish, setIsSpanish }) {
   const [activeHash, setActiveHash] = useState(window.location.hash);
@@ -15,17 +14,17 @@ export default function NavBar({ isSpanish, setIsSpanish }) {
     {
       title: isSpanish ? "Proyectos" : "Projects",
       label: isSpanish ? "proyectos" : "projects",
-      url: isSpanish ? "/#proyectos" : "/#projects",
+      url: "/#projects",
     },
+    // {
+    //   title: isSpanish ? "Experiencia" : "Experience",
+    //   label: isSpanish ? "experiencia" : "experience",
+    //   url: isSpanish ? "/#experiencia" : "/#experience",
+    // },
     {
-      title: isSpanish ? "Experiencia" : "Experience",
-      label: isSpanish ? "experiencia" : "experience",
-      url: isSpanish ? "/#experiencia" : "/#experience",
-    },
-    {
-      title: isSpanish ? "Yo" : "Me",
+      title: isSpanish ? "Sobre mi" : "About me",
       label: isSpanish ? "sobre-mi" : "about-me",
-      url: isSpanish ? "/#sobre-mi" : "/#about-me",
+      url: "/#about-me",
     },
     {
       title: isSpanish ? "Contacto" : "Contact",
@@ -38,11 +37,12 @@ export default function NavBar({ isSpanish, setIsSpanish }) {
 
   return (
     <>
-      <header className="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent">
-        <nav className="header-nav flex gap-x-1  py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 justify-center items-center [clip-path:ellipse(100%_100%_at_50%_0%)]">
+      <header className="header-nav w-full flex gap-x-1 px-2 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent ">
+        <nav className="header-nav w-full flex flex-wrap gap-x-1 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 justify-center items-center [clip-path:ellipse(100%_100%_at_50%_0%)]">
           {navItems.map((link) => (
             <a
-              className={`nav-link relative text-xs sm:text-sm block px-1.5 sm:px-3 sm:py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400 ${
+              key={link.label}
+              className={`nav-link relative text-sm sm:text-sm block px-1.5 sm:px-3 sm:py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400 ${
                 activeHash === link.url.substring(1) ? "text-yellow-500" : ""
               }`}
               aria-label={link.label}
@@ -56,9 +56,9 @@ export default function NavBar({ isSpanish, setIsSpanish }) {
               setIsSpanish(!isSpanish);
             }}
             
-            className="flex items-center gap-1.5 px-1 py-2.5 rounded-xl text-sm transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400">
+            className="flex items-center gap-1.5 px-1 py-2.5 rounded-xl text-xs sm:text-sm transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400">
             
-            <span className="text-sm">Lan </span>
+            <span className="text-sm">{isSpanish ? "Español" : "English"} </span>
           </button>
         </nav>
       </header>

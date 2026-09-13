@@ -31,11 +31,11 @@ export default function Proyects({ isSpanish }) {
   const projects_info = [
     {
       title: isSpanish
-        ? "Aplication full-stack para la busqueda de libros "
+        ? "Aplicación full-stack para la búsqueda de libros"
         : "Full-stack book discovery application",
       description: isSpanish
-        ? "Usando una API abierta de libros, deja a usuarios registrarse y buscar por libros, ver detalles y mantener una lista de libros favoritos."
-        : "Using the open Library API, let registered users search for books, view detailed book information, and maintain a personal favourites list.",
+        ? "Usando una API abierta de libros, permite a los usuarios registrarse y buscar libros, ver detalles y mantener una lista de libros favoritos."
+        : "Using the open Library API, it lets registered users search for books, view detailed book information, and maintain a personal favourites list.",
       proyectImg: proyect_1,
       tags: ["NEXT", "JAVASCRIPT", "BOOTSTRAP", "REACT", "HTML", "MONGODB"],
       github: "https://github.com/Hopesntn/web422NAA-project",
@@ -43,11 +43,11 @@ export default function Proyects({ isSpanish }) {
     },
     {
       title: isSpanish
-        ? "Aplication web para servicio de comidas "
-        : "Web-application for a meal-kit service",
+        ? "Aplicación web para un servicio de comidas"
+        : "Web application for a meal-kit service",
       description: isSpanish
-        ? "Demuestra registro, autenticacion, catalogo de comidas y sessiones basadas en el rol elegido"
-        : "It provides registration, authentication, meals catalog browsing, buying cart and session-based role",
+        ? "Demuestra registro, autenticación, catálogo de comidas y sesiones basadas en el rol elegido"
+        : "It provides registration, authentication, meal catalog browsing, a shopping cart, and role-based sessions.",
 
       proyectImg: proyect_2,
       tags: ["HTML", "JAVASCRIPT", "TAILWIND", "MONGODB"],
@@ -59,8 +59,8 @@ export default function Proyects({ isSpanish }) {
         ? "Videojuego: El destino del nigromante"
         : "Videogame: Fate of the Necromancer",
       description: isSpanish
-        ? "Se concentra en aparecer criaturas que persiguen al jugador, el cual debe tirar projectiles a los enemigos que aparecen alrededor del mapa"
-        : "Focus on summoning undead creatures that trail around the player and send out projectiles to incoming enemies that spawn around the map",
+        ? "Se concentra en la aparición de criaturas que persiguen al jugador, quien debe lanzar proyectiles a los enemigos que aparecen alrededor del mapa. *Este proyecto fue hecho en colaboracion con mas desarrolladores (mas information en github)"
+        : "It focuses on summoning undead creatures that follow the player and sending projectiles at incoming enemies that spawn around the map.*This project was made collaborating with more developers (more information inside github)",
 
       proyectImg: proyect_3,
       tags: ["CSS", "C", "C__"],
@@ -136,11 +136,11 @@ export default function Proyects({ isSpanish }) {
     tags: project.tags.map((key) => tags[key]).filter(Boolean),
   }));
   return (
-    <div className="flex flex-col gap-y-16 mt-8">
+    <div className="flex flex-col gap-y-12 mt-8 md:gap-y-16">
       {PROJECTS.map(
         ({ proyectImg, title, description, tags, link, github }) => (
           <article key={title} className="flex flex-col space-x-0 space-y-6 group md:flex-row md:space-x-10 md:space-y-0">
-            <div className="w-full md:w-1/2">
+            <div className="w-full min-w-0 md:w-1/2">
               <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition-all duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.2)] lg:border lg:border-gray-800 lg:hover:border-yellow-400/30 lg:hover:bg-gray-800/50">
                 <img
                   alt={title}
@@ -154,8 +154,8 @@ export default function Proyects({ isSpanish }) {
               </div>
             </div>
 
-            <div className="w-full md:w-1/2 md:max-w-lg flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            <div className="w-full min-w-0 md:w-1/2 md:max-w-lg flex flex-col justify-center">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">
                 {title}
               </h3>
               <ul className="flex flex-row flex-wrap mt-3 gap-2">
@@ -170,7 +170,7 @@ export default function Proyects({ isSpanish }) {
                 ))}
               </ul>
 
-              <p className="mt-3 text-gray-700 dark:text-gray-400 text-pretty text-lg">
+              <p className="mt-3 text-gray-700 dark:text-gray-400 text-pretty text-base md:text-lg">
                 {description}
               </p>
               <footer className="flex items-center mt-4 gap-x-4">
