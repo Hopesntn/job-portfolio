@@ -12,7 +12,7 @@ export default function Footer({isSpanish}) {
 							</span>
 
 
-							<a href="mailto:fabricio.ortiz.dev@gmail.com">Contacto
+							<a href="mailto:fabri.ortiz2005@hotmail.com">Contacto
 							</a>
 						</>
 					) : (
@@ -22,7 +22,7 @@ export default function Footer({isSpanish}) {
 							</span>
 
 
-							<a href="mailto:fabricio.ortiz.dev@gmail.com">
+							<a href="mailto:fabri.ortiz2005@hotmail.com">
 								Contact
 							</a>
 						</>
