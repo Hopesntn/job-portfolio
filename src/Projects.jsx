@@ -65,7 +65,7 @@ export default function Proyects({ isSpanish }) {
       proyectImg: proyect_3,
       tags: ["CSS", "C", "C__"],
       github:
-        "https://github.com/adityatambe31/GAM-Grp-04/tree/main/Assignment-03",
+        "https://github.com/Hopesntn/openGL-Fate-Of-The-Necromancer",
       link: "",
     },
   ];
